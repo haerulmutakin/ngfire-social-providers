@@ -42,6 +42,14 @@ export class LoginComponent implements OnInit {
       });
   }
 
+  doGoogleRegister() {
+    this.accountSvc.doGoogleLogin()
+    .then(res => {
+      this.router.navigate(['/overview']);
+    }, err => console.log(err)
+    );
+  }
+
   tryFacebookLogin() {
     this.accountSvc.doFacebookLogin()
     .then(res => {
