@@ -17,8 +17,4 @@ export class UserService {
       });
     });
   }
-
-  updateCurrentUser() {
-
-  }
 }
