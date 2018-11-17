@@ -32,7 +32,6 @@ export class LoginComponent implements OnInit {
 
   doLogin() {
     const formValues = this.loginForm.value;
-    console.log(formValues);
     this.accountSvc.doLogin(formValues)
       .then(res => {
         this.router.navigate(['/overview']);
